@@ -7,10 +7,12 @@ var helmet = require("helmet");
 var expressStaticGzip = require("express-static-gzip");
 var mongoose = require("mongoose");
 
-var indexRouter = require("./routes/index");
+var indexRouter = require("./routes/api/index");
 var apiRouter = require("./routes/api");
 
 var app = express();
+
+require("dotenv").config();
 
 app.use(helmet());
 

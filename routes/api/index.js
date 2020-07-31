@@ -1,9 +1,14 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
+// Import users routes as a userRouter
+var userRouter = require("./users");
+
+router.use("/users", userRouter);
+
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.json({success: true, message: 'Welcome to Node APIs'});
+router.get("/", function(req, res, next) {
+  res.json({ success: true, message: "Welcome to Mutual Fund Listing App" });
 });
 
 module.exports = router;
