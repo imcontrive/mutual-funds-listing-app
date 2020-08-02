@@ -9,7 +9,7 @@ var jwt = require("jsonwebtoken");
 
 // Routes for user registration
 
-router.post("/register", (req, res) => {
+router.post("/signup", (req, res) => {
   User.create(req.body, (err, user) => {
     // console.log("request.body", req.body);
     if (err) return res.json(err);
@@ -66,7 +66,7 @@ router.get("/:id", function(req, res, next) {
 
 // routes for edit/update
 
-router.put("/update/:id", function(req, res, next) {
+router.put("/edit/:id", function(req, res, next) {
   User.findByIdAndUpdate(
     req.params.id,
     req.body,
