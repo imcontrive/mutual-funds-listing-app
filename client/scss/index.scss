@@ -1,0 +1,146 @@
+/* Styles for HomePage*/
+
+.is_homepage_wrapper {
+  width: 100%;
+  height: 100%;
+
+  // background: #2f5378;
+  // position: relative;
+  // position: absolute;
+  .bg-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .bg-layer {
+    z-index: -1;
+    background-color: #21396a;
+    clip-path: polygon(96% 0, 100% 0, 100% 100%, 64% 100%);
+  }
+  .heading {
+    width: 100%;
+    color: #21396a;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+/* Styles for Navbar*/
+
+.is_nav_wrapper {
+  width: 100%;
+  background: #234567;
+  color: #fff;
+  padding: 15px 0px;
+
+  .nav_items {
+    max-width: calc(100% - 400px);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: "Roboto";
+
+    .navlink {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .nav_items > li:hover {
+    color: #2d9dff;
+    transition: all ease 0.3s;
+  }
+}
+
+/* Styles for Login ? SignUp*/
+
+.login-card,
+.signup-card {
+  font-size: 1.25rem;
+  max-width: 500px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  p > label,
+  p > .form-input,
+  .btn,
+  .link_to_create {
+    margin: 12px;
+  }
+  a {
+    text-decoration: none;
+    color: #234567;
+  }
+  a:hover {
+    color: #2d9dff;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 60px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #234567;
+    background-color: #fff;
+  }
+
+  input:focus {
+    border: 2px solid #234567;
+  }
+
+  .btn-primary {
+    background-color: #234567;
+    border-color: #234567;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+  }
+
+  .btn-primary:hover {
+    background-color: #2f5378;
+    border-color: #93cf66;
+    cursor: pointer;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dropmenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* COMMON CSS*/
+
+.text-center {
+  text-align: center;
+}

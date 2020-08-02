@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>React HomePage</h1>
+    <div className="is_homepage_wrapper">
+      <div className="bg-layer"></div>
+      <h2 className="heading">Mutual Fund Listing App</h2>
     </div>
   );
 };

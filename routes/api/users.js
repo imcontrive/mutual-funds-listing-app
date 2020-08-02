@@ -27,6 +27,7 @@ router.post("/signup", (req, res) => {
 // routes for login
 router.post("/login", (req, res) => {
   const data = req.body;
+  console.log(data, "from backend");
   User.findOne({ email: data.email }, (err, user) => {
     if (err)
       return res.status(500).json({ success: false, error: "server error" });
