@@ -40,13 +40,28 @@ router.post("/login", (req, res) => {
       var result = bcrypt.compareSync(data.password, user.password);
       if (result) {
         var token = jwt.sign({ _id: user._id }, process.env.SECRET);
-        return res.status(200).json({ success: true, token: token, user });
+        return res.status(200).json({
+          success: true,
+          message: "You are succesfully loggedIn",
+          token: token,
+          user
+        });
       } else {
         return res
           .status(400)
           .json({ success: false, error: "Invalid Password" });
       }
     }
+  });
+});
+
+// routes for finding currentLogin Users
+
+router.get("/me", auth.verifyToken, (req, res) => {
+  console.log(req.body, "/me....");
+  User.findById(req.user._id, (err, user) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(201).json({ success: true, user: user });
   });
 });
 

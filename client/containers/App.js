@@ -18,6 +18,7 @@ class App extends Component {
     var token = localStorage.getItem("authToken") || "";
     if (token) {
       this.setState({ token: token });
+      console.log(token, "token");
       this.props.dispatch(getCurrentUser());
     } else {
       this.props.dispatch(noToken());
@@ -25,6 +26,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         {/* <Login /> */}

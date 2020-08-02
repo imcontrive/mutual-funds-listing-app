@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-export default class Login extends Component {
+export class Login extends Component {
   state = {
     email: "",
     password: "",
@@ -32,7 +33,7 @@ export default class Login extends Component {
           ? res.json().then(data => {
               console.log(data);
               localStorage.setItem("authToken", data.token);
-              // this.props.history.push("/");
+              this.props.history.push("/");
             })
           : console.log(res, "server error");
       })
@@ -82,3 +83,11 @@ export default class Login extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    currentUser: state.currentUser.user
+  };
+};
+
+export default connect(mapStateToProps)(Login);
