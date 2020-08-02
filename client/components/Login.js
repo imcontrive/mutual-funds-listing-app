@@ -33,6 +33,10 @@ export class Login extends Component {
           ? res.json().then(data => {
               console.log(data);
               localStorage.setItem("authToken", data.token);
+              this.props.dispatch({
+                type: "USER_LOGIN_SUCCESS",
+                data: data
+              });
               this.props.history.push("/");
             })
           : console.log(res, "server error");
