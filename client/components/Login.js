@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-export class Login extends Component {
+class Login extends Component {
   state = {
     email: "",
     password: "",

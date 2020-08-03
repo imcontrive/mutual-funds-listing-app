@@ -2,11 +2,6 @@ import axios from "axios";
 
 const rootUrl = "http://localhost:3000/api/v1";
 
-// const setTokenToAxios = token => {
-//   const newToken = localStorage.getItem("authToken") || "";
-//   axios.defaults.headers.Authorization = newToken;
-// };
-
 export const getCurrentUser = () => {
   return dispatch => {
     axios
