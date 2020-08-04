@@ -8,7 +8,7 @@ router.use("/users", userRouter);
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.json({ success: true, message: "Welcome to Mutual Fund Listing App" });
+  res.json({ success: true, message: "Welcome to Mutual Funds Listing App" });
 });
 
 module.exports = router;

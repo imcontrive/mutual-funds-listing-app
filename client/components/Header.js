@@ -11,7 +11,7 @@ class Header extends Component {
     return (
       <div className="is-header-wrapper header">
         <NavLink to="/" className="logo">
-          Mutual Funds
+          MutualFunds
         </NavLink>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label className="menu-icon" htmlFor="menu-btn">
@@ -21,9 +21,7 @@ class Header extends Component {
           {currentUser ? (
             <>
               <li className="user-section">
-                <NavLink to={`/user/${currentUser._id}`}>
-                  {currentUser.name ? currentUser.name : "LOL"}
-                </NavLink>
+                <NavLink to={`/user/${currentUser._id}`}>My Account</NavLink>
               </li>
 
               <li

@@ -31,7 +31,7 @@ class Login extends Component {
       .then(res => {
         return res.status === 200
           ? res.json().then(data => {
-              console.log(data);
+              // console.log(data);
               localStorage.setItem("authToken", data.token);
               this.props.dispatch({
                 type: "USER_LOGIN_SUCCESS",

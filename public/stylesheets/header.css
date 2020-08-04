@@ -1,21 +1,15 @@
-/* body {
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-  background-color: #f4f4f4;
-} */
-
-a {
-  color: #fff;
-}
-
-/* header */
+/* __________________________
+__________Header___________ */
 
 .header {
-  background-color: #100e17;
+  background-color: #1a3878;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 3;
+}
+a {
+  color: #fff;
 }
 
 .header ul {
@@ -23,10 +17,12 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #100e17;
+  background-color: #1a3878;
 }
 .logo {
-  color: #ff8a00;
+  font-weight: 700;
+  line-height: 1.324;
+  font-family: "Crimson Text", serif;
 }
 
 .header li a {
@@ -38,7 +34,8 @@ a {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #312d3c;
+  color: #c09f5a;
+  font-weight: 500;
 }
 
 .header .logo {
@@ -69,17 +66,17 @@ a {
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: #fff;
   display: block;
   height: 2px;
   position: relative;
-  transition: background 0.2s ease-out;
+  transition: 0.2s ease-out;
   width: 18px;
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #fff;
   content: "";
   display: block;
   height: 100%;
@@ -140,8 +137,4 @@ a {
   .header .menu-icon {
     display: none;
   }
-
-  /* .is_homepage_wrapper .heading {
-    font-size: 1.75em;
-  } */
 }

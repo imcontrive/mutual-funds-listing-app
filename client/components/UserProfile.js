@@ -3,53 +3,53 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 class UserProfile extends Component {
-  // editHandler = () => {
-  //   this.props.history.push(`/edit:${this.props.currentUser._id}`);
-  // };
   render() {
     const { currentUser } = this.props;
     return (
-      <div className="is_pro_wrapper">
-        <ul className="is_user_content">
-          <span className="user_info avatar_w">
-            <p className="avatar">
-              {currentUser ? currentUser.name.split("").slice(0, 1) : "Noname"}
-            </p>
-          </span>
-          <span className="user_details">
-            <p className="padding_left margin">
-              <li>Name</li>
-              <li>{currentUser ? currentUser.name : ""}</li>
-            </p>
-            <p className="padding_left margin">
-              <li>Email</li>
-              <li>{currentUser ? currentUser.email : ""}</li>
-            </p>
-            <p className="padding_left margin">
-              <li>Age</li>
-              <li>{currentUser ? currentUser.age : ""}</li>
-            </p>
-            <p className="padding_left margin">
-              <li>Gender</li>
-              <li>{currentUser ? currentUser.gender : ""}</li>
-            </p>
+      <>
+        <div className="card-container">
+          <div className="upper-container">
+            <div className="image-contanier">
+              <span className="avatar">
+                {currentUser
+                  ? currentUser.name.split("").slice(0, 1)
+                  : "Noname"}
+              </span>
+            </div>
+          </div>
+          <div className="lower-container">
             {currentUser ? (
+              <div className="user-info">
+                <span>
+                  <h4>Name</h4>
+                  <h4>Email</h4>
+                  <h4>Gender</h4>
+                  <h4>Age</h4>
+                </span>
+                <span>
+                  <h5>{currentUser.name}</h5>
+                  <h5>{currentUser.email}</h5>
+                  <h5>{currentUser.gender}</h5>
+                  <h5>{currentUser.age}</h5>
+                </span>
+              </div>
+            ) : (
+              ""
+            )}
+            <div>
               <NavLink
-                className="btn padding_left margin btn-primary"
-                // to={`/edit/${currentUser._id}`}
                 to={{
                   pathname: `/edit/${currentUser._id}`,
                   state: { userId: currentUser._id }
                 }}
+                className="btn"
               >
                 Edit Profile
               </NavLink>
-            ) : (
-              ""
-            )}
-          </span>
-        </ul>
-      </div>
+            </div>
+          </div>
+        </div>
+      </>
     );
   }
 }

@@ -4,10 +4,10 @@ import Header from "./Header";
 
 const HomePage = () => {
   return (
-    <div className="is_homepage_wrapper">
+    <div className="main-wrapper">
       <Header />
       <div className="bg-layer"></div>
-      <h2 className="heading">Mutual Funds Listing App</h2>
+      <h2 className="hero-heading">Mutual Funds Listing App</h2>
     </div>
   );
 };

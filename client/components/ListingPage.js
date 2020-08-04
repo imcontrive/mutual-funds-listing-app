@@ -1,71 +1,112 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class ListingPage extends Component {
+import Card from "./Card";
+
+const API_URLS = [
+  "https://api.mfapi.in/mf/100035",
+  "https://api.mfapi.in/mf/100042",
+  "https://api.mfapi.in/mf/147736",
+  "https://api.mfapi.in/mf/101745",
+  "https://api.mfapi.in/mf/101856",
+  "https://api.mfapi.in/mf/121894",
+  "https://api.mfapi.in/mf/100122",
+  "https://api.mfapi.in/mf/100952",
+  "https://api.mfapi.in/mf/100357",
+  "https://api.mfapi.in/mf/105275",
+  "https://api.mfapi.in/mf/100828"
+];
+
+class ListingPage extends Component {
+  state = {
+    query: ""
+  };
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
   componentDidMount() {
-    fetch(
-      // `https://www.quandl.com/api/v3/datatables/NDW/EQTA?api_key=jccEMeaJ1hpsqqxVuz8k`,
-      // `https://www.rupeevest.com/Mutual-Funds-India/Best-Mutual-Funds`,
-      "https://market.mashape.com/navii/mutual-funds-nav-india",
-      {
-        method: "GET"
-      }
-    ).then(res => console.log(res, "list"));
+    //looping over APIs
+    var fetchAll = () => {
+      let allresData = {};
+    };
+    for (const url of API_URLS) {
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          // console.log(data);
+          this.props.dispatch({
+            type: "GET_FUNDS_SUCCESS",
+            payload: data
+          });
+        });
+    }
   }
 
   render() {
+    const { query } = this.state;
+    const { funds } = this.props;
+    console.log("query", query, funds, "funds");
+    var _toSendData;
+
+    if (query) {
+      const regexp = new RegExp(query, "i");
+      //Need to improve
+      if (funds) {
+        if (regexp.test(funds.meta.scheme_name)) {
+          _toSendData = funds;
+        }
+      }
+      // console.log(_toSendData, "_toSendData = funds;");
+    } else {
+      _toSendData = funds;
+    }
+
     return (
       <div className="is_product_wrapper">
-        <div className="card">
-          <div className="card-header">
-            <div className="header-left">
-              <div className="badge">K</div>
-              <h3>Kotak Equity Opportunities Fund</h3>
-            </div>
-            <div className="star-icons">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-half"></i>
-            </div>
-          </div>
-          <div className="card-body"></div>
-        </div>
-
-        <div className="card">
-          <div className="card-header">
-            <div className="header-left">
-              <div className="badge">K</div>
-              <h3>Kotak Equity Opportunities Fund</h3>
-            </div>
-            <div className="star-icons">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-half"></i>
+        <div className="wrapper">
+          <div className="container">
+            <div className="search-form form">
+              <label>
+                {/* <span className="screen-reader-text">Search for...</span> */}
+                <input
+                  type="search"
+                  className="search-field"
+                  placeholder="Search by name..."
+                  name="query"
+                  value={this.state.query}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <input
+                type="submit"
+                className="search-submit button "
+                value="Search"
+              />
             </div>
           </div>
-          <div className="card-body"></div>
         </div>
-
-        <div className="card">
-          <div className="card-header">
-            <div className="header-left">
-              <div className="badge">K</div>
-              <h3>Kotak Equity Opportunities Fund</h3>
-            </div>
-            <div className="star-icons">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star-half"></i>
-            </div>
-          </div>
-          <div className="card-body"></div>
-        </div>
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
+        <Card data={_toSendData} />
       </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    funds: state.funds.data
+  };
+};
+
+export default connect(mapStateToProps)(ListingPage);

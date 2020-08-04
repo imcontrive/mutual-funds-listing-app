@@ -1,0 +1,464 @@
+{
+  "portfolio_holdings": [
+    {
+      "compname": "Clearing Corporation Of India Ltd.",
+      "holdpercentage": 11.58
+    },
+    {
+      "compname": "HDFC Bank Ltd.",
+      "holdpercentage": 8.45
+    },
+    {
+      "compname": "Infosys Ltd.",
+      "holdpercentage": 7.2
+    },
+    {
+      "compname": "Kotak Mahindra Bank Ltd.",
+      "holdpercentage": 7.04
+    },
+    {
+      "compname": "Bajaj Finance Ltd.",
+      "holdpercentage": 6.37
+    },
+    {
+      "compname": "Reliance Industries Ltd.",
+      "holdpercentage": 6.16
+    },
+    {
+      "compname": "Avenue Supermarts Ltd.",
+      "holdpercentage": 5.94
+    },
+    {
+      "compname": "Tata Consultancy Services Ltd.",
+      "holdpercentage": 5.35
+    },
+    {
+      "compname": "Bharti Airtel Ltd.",
+      "holdpercentage": 5.29
+    },
+    {
+      "compname": "ICICI Bank Ltd.",
+      "holdpercentage": 5.12
+    },
+    {
+      "compname": "Hindustan Unilever Ltd.",
+      "holdpercentage": 4.62
+    },
+    {
+      "compname": "Nestle India Ltd.",
+      "holdpercentage": 4.54
+    },
+    {
+      "compname": "Asian Paints Ltd.",
+      "holdpercentage": 3.02
+    },
+    {
+      "compname": "Divis Laboratories Ltd.",
+      "holdpercentage": 2.92
+    },
+    {
+      "compname": "Dr. Reddys Laboratories Ltd.",
+      "holdpercentage": 2.62
+    },
+    {
+      "compname": "Pidilite Industries Ltd.",
+      "holdpercentage": 2.21
+    },
+    {
+      "compname": "Titan Company Ltd.",
+      "holdpercentage": 1.7
+    },
+    {
+      "compname": "Axis Bank Ltd.",
+      "holdpercentage": 1.39
+    },
+    {
+      "compname": "HDFC Life Insurance Co Ltd.",
+      "holdpercentage": 1.35
+    },
+    {
+      "compname": "Torrent Pharmaceuticals Ltd.",
+      "holdpercentage": 1.34
+    },
+    {
+      "compname": "Housing Development Finance Corporation Ltd.",
+      "holdpercentage": 1.28
+    },
+    {
+      "compname": "Maruti Suzuki India Ltd.",
+      "holdpercentage": 1.21
+    },
+    {
+      "compname": "Cipla Ltd.",
+      "holdpercentage": 1.03
+    },
+    {
+      "compname": "ICICI Lombard General Insurance Co Ltd.",
+      "holdpercentage": 0.96
+    },
+    {
+      "compname": "Ultratech Cement Ltd.",
+      "holdpercentage": 0.91
+    },
+    {
+      "compname": "Housing Development Finance Corporation Ltd. -SR-W-001 07.15% (16-Sep-21)",
+      "holdpercentage": 0.18
+    },
+    {
+      "compname": "Reliance Industries Ltd - Partly Paid up Equity Shares (Rights Entitlements (REs)",
+      "holdpercentage": 0.13
+    },
+    {
+      "compname": "HDFC Bank Ltd.",
+      "holdpercentage": 0.05
+    },
+    {
+      "compname": "Net Current Asset",
+      "holdpercentage": 0.02
+    }
+  ]
+}
+
+
+{
+  "peer_comparision":[
+     {
+        "fund_house":"Axis Mutual Fund",
+        "s_name1":"Axis Bluechip Fund-Reg(G)",
+        "s_name":"Axis Bluechip Fund-Reg(G)",
+        "rupeevest_rating":"5",
+        "rank_3year":1,
+        "ytd_returns":-5.68,
+        "returns_1month":5.37,
+        "returns_6month":-6.23,
+        "returns_3month":7.27,
+        "returns_1year":4.64,
+        "returns_3year":8.63,
+        "returns_5year":8.67,
+        "aumtotal":14522.34,
+        "expenceratio":1.7,
+        "schemecode":8250
+     },
+     {
+        "fund_house":"DSP Mutual Fund",
+        "s_name1":"DSP 3Y Close Ended Equity Fund-Reg(G)",
+        "s_name":"DSP 3Y Close Ended Equity Fund-Reg(G)",
+        "rupeevest_rating":"Unrated",
+        "rank_3year":16,
+        "ytd_returns":-1.09,
+        "returns_1month":4.25,
+        "returns_6month":-1.65,
+        "returns_3month":8.2,
+        "returns_1year":12.04,
+        "returns_3year":2.31,
+        "returns_5year":8.24,
+        "aumtotal":31.86,
+        "expenceratio":null,
+        "schemecode":30123
+     },
+     {
+        "fund_house":"Mirae Asset Mutual Fund",
+        "s_name1":"Mirae Asset Large Cap Fund-Reg(G)",
+        "s_name":"Mirae Asset Large Cap Fund-Reg(G)",
+        "rupeevest_rating":"4",
+        "rank_3year":7,
+        "ytd_returns":-8.32,
+        "returns_1month":7.53,
+        "returns_6month":-7.21,
+        "returns_3month":12.33,
+        "returns_1year":0.64,
+        "returns_3year":3.61,
+        "returns_5year":7.99,
+        "aumtotal":16380.71,
+        "expenceratio":1.66,
+        "schemecode":4457
+     },
+     {
+        "fund_house":"Canara Robeco Mutual Fund",
+        "s_name1":"Canara Rob Bluechip Equity Fund-Reg(G)",
+        "s_name":"Canara Rob Bluechip Equity Fund-Reg(G)",
+        "rupeevest_rating":"5",
+        "rank_3year":2,
+        "ytd_returns":-1.69,
+        "returns_1month":6.08,
+        "returns_6month":-3.02,
+        "returns_3month":10.02,
+        "returns_1year":9.88,
+        "returns_3year":7.05,
+        "returns_5year":7.88,
+        "aumtotal":533.11,
+        "expenceratio":2.54,
+        "schemecode":8217
+     },
+     {
+        "fund_house":"ICICI Prudential Mutual Fund",
+        "s_name1":"ICICI Pru Growth Fund-2(DP)",
+        "s_name":"ICICI Pru Growth Fund-2(DP)",
+        "rupeevest_rating":"Unrated",
+        "rank_3year":5,
+        "ytd_returns":-9.45,
+        "returns_1month":3.76,
+        "returns_6month":-9.17,
+        "returns_3month":7.22,
+        "returns_1year":-3.82,
+        "returns_3year":3.99,
+        "returns_5year":6.85,
+        "aumtotal":45.73,
+        "expenceratio":1.4,
+        "schemecode":29946
+     }
+  ]
+}
+
+{
+  "risk_data":[
+     {
+        "incept_date":"2010-01-05",
+        "schemecode":8250,
+        "sdx_returns":25.47,
+        "sharpex_returns":0.12,
+        "sotinox_returns":0.17,
+        "betax_returns":0.78,
+        "alphax_returns":0.96,
+        "treynorx_returns":3.86,
+        "sdy_returns":1.6,
+        "sharpey_returns":0.01,
+        "sotinoy_returns":0.01,
+        "betay_returns":0.78,
+        "alphay_returns":0.0,
+        "treynory_returns":0.02,
+        "rank_sd":6,
+        "rank_sharpe":9,
+        "rank_sotino":9,
+        "rank_beta":7,
+        "rank_alpha":9,
+        "rank_treynor":9,
+        "index_name":"NIFTY 50 - TRI",
+        "s_name":"Axis Bluechip Fund-Reg(G)",
+        "avg_std_dev":28.21,
+        "avg_sharpe":-0.09,
+        "avg_sotino":-0.12,
+        "avg_beta":0.83,
+        "avg_alpha":-4.15,
+        "avg_treyno":-3.38,
+        "no_of_funds_total":45
+     }
+  ]
+}
+
+
+{
+  "schemedata":[
+     {
+        "option":"Growth",
+        "s_name":"Axis Bluechip Fund-Reg(G)",
+        "index_code":154,
+        "rv_tax_category":"EQ",
+        "amc_code":400040,
+        "classification_id":1,
+        "fund_manager_code":409,
+        "schemecode":8250,
+        "type":"Open ended scheme",
+        "expenceratio":1.7,
+        "fund_manager":"Shreyash Devalkar",
+        "navchange":"-0.07",
+        "turnover_ratio":99.0,
+        "exitload":1.0,
+        "navrs":30.23,
+        "navdate":"2020-07-31",
+        "lockperiod":0.0,
+        "inception_date":"2010-01-05",
+        "inception_return":11.03,
+        "minimum_investment":5000.0,
+        "aumtotal":14522.3421,
+        "fund_house":"Axis Mutual Fund",
+        "index_name":"NIFTY 50 - TRI",
+        "redemption_period":10,
+        "aumdate":"2020-06-30",
+        "returns_1month":5.3677,
+        "returns_3month":7.2747,
+        "returns_1year":4.6383,
+        "returns_3year":8.6255,
+        "returns_5year":8.6683,
+        "ytd_returns":-5.678627145085794,
+        "exitload_remarks":"Nil for 10% of investments and 1% for remaining investments on or before 12M, Nil after 12M",
+        "highest_sector":"Financials",
+        "portfolio_attributes":null,
+        "cost_factor":null,
+        "risk":null,
+        "rupeevest_rating":"5",
+        "consistency_of_return":null,
+        "total_return":null,
+        "classification":"Equity : Large Cap",
+        "navrs_gp":30.23
+     }
+  ],
+  "sip_min_investment":[
+     {
+        "sipmininvest":500.0
+     }
+  ]
+}
+
+
+{
+  "related_funds":[
+     {
+        "fund_house":"ICICI Prudential Mutual Fund",
+        "s_name1":"ICICI Pru Bluechip Fund(G)",
+        "s_name":"ICICI Pru Bluechip Fund(G)",
+        "schemecode":4980,
+        "rupeevest_rating":"4",
+        "aumtotal":22880.65,
+        "returns_5year":"5.96"
+     },
+     {
+        "fund_house":"SBI Mutual Fund",
+        "s_name1":"SBI BlueChip Fund-Reg(G)",
+        "s_name":"SBI BlueChip Fund-Reg(G)",
+        "schemecode":2711,
+        "rupeevest_rating":"2",
+        "aumtotal":20782.63,
+        "returns_5year":"5.09"
+     },
+     {
+        "fund_house":"Aditya Birla Sun Life Mutual Fund",
+        "s_name1":"Aditya Birla SL Frontline Equity Fund(G)",
+        "s_name":"Aditya Birla SL Frontline Equity Fund(G)",
+        "schemecode":447,
+        "rupeevest_rating":"2",
+        "aumtotal":16661.85,
+        "returns_5year":"4.52"
+     },
+     {
+        "fund_house":"Mirae Asset Mutual Fund",
+        "s_name1":"Mirae Asset Large Cap Fund-Reg(G)",
+        "s_name":"Mirae Asset Large Cap Fund-Reg(G)",
+        "schemecode":4457,
+        "rupeevest_rating":"4",
+        "aumtotal":16380.71,
+        "returns_5year":"7.99"
+     },
+     {
+        "fund_house":"HDFC Mutual Fund",
+        "s_name1":"HDFC Top 100 Fund(G)",
+        "s_name":"HDFC Top 100 Fund(G)",
+        "schemecode":1331,
+        "rupeevest_rating":"4",
+        "aumtotal":15481.84,
+        "returns_5year":"4.01"
+     },
+     {
+        "fund_house":"Axis Mutual Fund",
+        "s_name1":"Axis Bluechip Fund-Reg(G)",
+        "s_name":"Axis Bluechip Fund-Reg(G)",
+        "schemecode":8250,
+        "rupeevest_rating":"5",
+        "aumtotal":14522.34,
+        "returns_5year":"8.67"
+     },
+     {
+        "fund_house":"Nippon India Mutual Fund",
+        "s_name1":"Nippon India Large Cap Fund(G)",
+        "s_name":"Nippon India Large Cap Fund(G)",
+        "schemecode":2455,
+        "rupeevest_rating":"4",
+        "aumtotal":9982.98,
+        "returns_5year":"3.32"
+     },
+     {
+        "fund_house":"UTI Mutual Fund",
+        "s_name1":"UTI Mastershare-Reg(G)",
+        "s_name":"UTI Mastershare-Reg(G)",
+        "schemecode":3626,
+        "rupeevest_rating":"4",
+        "aumtotal":5887.33,
+        "returns_5year":"4.98"
+     }
+  ]
+}
+
+
+
+
+
+/**
+
+     },
+
+<div class="select">
+  <select name="slct" id="slct">
+    <option selected disabled>Choose an option</option>
+    <option value="1">Pure CSS</option>
+    <option value="2">No JaS</option>
+    <option value="3">Nice!</option>
+  </select>
+</div>
+
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f39c12;
+}
+h1 {
+  margin: 0 0 0.25em;
+}
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+*// 

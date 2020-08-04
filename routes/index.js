@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("*", function(req, res, next) {
-  res.render("index", { title: "Mutual Fund Listing App" });
+  res.render("index", { title: "Mutual Funds" });
 });
 
 module.exports = router;
