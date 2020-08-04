@@ -64,11 +64,9 @@ class EditProfile extends Component {
   };
 
   render() {
-    // const { currentUser } = this.props;
     return (
       <div>
         <div className="signup-card">
-          {/* <form> */}
           <p>
             <label htmlFor="name">Name</label>
             <input
@@ -115,24 +113,12 @@ class EditProfile extends Component {
               />
             </p>
           </p>
-          {/* <p>
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                className="form-input"
-                name="password"
-                placeholder="Enter your password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </p> */}
           <input
             type="submit"
             className="btn btn-primary"
             value="Update Profile"
             onClick={this.updateHandler}
           />
-          {/* </form> */}
         </div>
       </div>
     );
