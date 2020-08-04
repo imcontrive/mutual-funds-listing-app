@@ -7,7 +7,7 @@ class EditProfile extends Component {
     email: "",
     gender: "",
     age: ""
-    // password: ""
+    // msg: ""
   };
 
   componentDidMount() {
@@ -56,9 +56,11 @@ class EditProfile extends Component {
     )
       .then(res => res.json())
       .then(data => {
+        alert(data.message);
+        // this.setState({ msg: data.message });
         this.props.dispatch({ type: "USER_LOGIN_SUCCESS", data: data });
         this.props.history.push("/");
-        console.log(data);
+        // console.log(data, "state,", this.state);
       })
       .catch(error => console.error("Error:", error));
   };
@@ -119,6 +121,14 @@ class EditProfile extends Component {
             value="Update Profile"
             onClick={this.updateHandler}
           />
+          {/* {this.state.msg ? (
+            <p style={{ color: "#1a3878", textAlign: "center" }}>
+              {" "}
+              {this.state.msg}{" "}
+            </p>
+          ) : (
+            ""
+          )} */}
         </div>
       </div>
     );
