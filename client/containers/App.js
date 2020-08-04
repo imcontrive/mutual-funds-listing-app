@@ -10,6 +10,7 @@ import ListingPage from "../components/ListingPage";
 import Header from "../components/Header";
 import UserProfile from "../components/UserProfile";
 import EditProfile from "../components/EditProfile";
+import Chart from "../components/Chart";
 
 class App extends Component {
   state = {
@@ -20,7 +21,6 @@ class App extends Component {
     var token = localStorage.getItem("authToken") || "";
     if (token) {
       this.setState({ token: token });
-      console.log(token, "token");
       this.props.dispatch(getCurrentUser());
     } else {
       this.props.dispatch(noToken());
@@ -28,7 +28,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.props);
     return (
       <div>
         <Header />
@@ -45,6 +44,7 @@ class App extends Component {
         <Route exact path="/signup" component={Signup} />
         <Route path="/user" component={UserProfile} />
         <Route path="/edit" component={EditProfile} />
+        <Route path="/funds" component={Chart} />
       </div>
     );
   }

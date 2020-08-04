@@ -1,21 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { mutualFunds } from "../../products";
+
+console.log(mutualFunds, "mutualFundsmutualFundsmutualFunds");
 
 import Card from "./Card";
 
-const API_URLS = [
-  "https://api.mfapi.in/mf/100035",
-  "https://api.mfapi.in/mf/100042",
-  "https://api.mfapi.in/mf/147736",
-  "https://api.mfapi.in/mf/101745",
-  "https://api.mfapi.in/mf/101856",
-  "https://api.mfapi.in/mf/121894",
-  "https://api.mfapi.in/mf/100122",
-  "https://api.mfapi.in/mf/100952",
-  "https://api.mfapi.in/mf/100357",
-  "https://api.mfapi.in/mf/105275",
-  "https://api.mfapi.in/mf/100828"
-];
+// const API_URLS = [
+//   "https://api.mfapi.in/mf/100035",
+//   "https://api.mfapi.in/mf/100042",
+//   "https://api.mfapi.in/mf/147736",
+//   "https://api.mfapi.in/mf/101745",
+//   "https://api.mfapi.in/mf/101856",
+//   "https://api.mfapi.in/mf/121894",
+//   "https://api.mfapi.in/mf/100122",
+//   "https://api.mfapi.in/mf/100952",
+//   "https://api.mfapi.in/mf/100357",
+//   "https://api.mfapi.in/mf/105275",
+//   "https://api.mfapi.in/mf/100828"
+// ];
 
 class ListingPage extends Component {
   state = {
@@ -31,16 +34,16 @@ class ListingPage extends Component {
 
   componentDidMount() {
     //looping over APIs
-    for (const url of API_URLS) {
-      fetch(url)
-        .then(res => res.json())
-        .then(data => {
-          this.props.dispatch({
-            type: "GET_FUNDS_SUCCESS",
-            payload: data
-          });
-        });
-    }
+    // for (const url of API_URLS) {
+    //   fetch(url)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //       this.props.dispatch({
+    //         type: "GET_FUNDS_SUCCESS",
+    //         payload: data
+    //       });
+    //     });
+    // }
   }
 
   render() {
@@ -83,11 +86,12 @@ class ListingPage extends Component {
               />
             </div>
           </div>
-        </div>
-        <Card data={_toSendData} />
-        <Card data={_toSendData} />
-        <Card data={_toSendData} />
-        <Card data={_toSendData} />
+        </div>{" "}
+        {funds ? funds.map(fund => <Card data={fund.meta} />) : ""}
+        {/* // <Card data={_toSendData} />
+        // <Card data={_toSendData} />
+        // <Card data={_toSendData} />
+        // <Card data={_toSendData} /> */}
       </div>
     );
   }
@@ -95,7 +99,7 @@ class ListingPage extends Component {
 
 const mapStateToProps = state => {
   return {
-    funds: state.funds.data
+    funds: state.funds.funds
   };
 };
 

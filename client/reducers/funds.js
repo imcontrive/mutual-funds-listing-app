@@ -1,5 +1,7 @@
+import { mutualFunds } from "../../products";
+
 const initialState = {
-  funds: {}
+  funds: mutualFunds
 };
 
 function funds(state = initialState, action) {

@@ -164,6 +164,13 @@ select {
   margin-top: 2em;
   cursor: pointer;
 }
+.card a {
+  text-decoration: none;
+  color: #010101 !important;
+}
+.card a:hover {
+  color: #1a3878;
+}
 
 .card-header {
   display: flex;
@@ -176,7 +183,12 @@ select {
   align-items: center;
 
   h3 {
-    font-style: italic;
+    // font-style: italic;
+    // color: #1a3878;
+    color: #010101;
+  }
+  h3:hover {
+    color: #1a3878;
   }
 }
 
@@ -415,6 +427,10 @@ span h4 {
 }
 
 /* user Profile card ends here.*/
+
+.chart-wrapper {
+  padding-top: 5rem;
+}
 
 /**********************MEDIA QUERIES**********************/
 

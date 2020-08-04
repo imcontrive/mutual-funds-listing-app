@@ -1,15 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Card(props) {
   const getBadge = title => {
     return (title && title[0]) || "";
   };
 
-  const fund_house = props && props.data && props.data.meta.fund_house;
-  const scheme_category =
-    props && props.data && props.data.meta.scheme_category;
-  const scheme_name = props && props.data && props.data.meta.scheme_name;
-  const scheme_type = props && props.data && props.data.meta.scheme_type;
+  const fund_house = props && props.data && props.data.fund_house;
+  const scheme_category = props && props.data && props.data.scheme_category;
+  const scheme_name = props && props.data && props.data.scheme_name;
+  const scheme_type = props && props.data && props.data.scheme_type;
 
   return (
     <div className="card">
@@ -20,7 +20,14 @@ function Card(props) {
               <div className="badge-container">
                 <p className="badge">{getBadge(scheme_name)}</p>
               </div>
-              <h3>{scheme_name}</h3>
+              <NavLink
+                to={{
+                  pathname: `/funds/${scheme_name}`,
+                  state: { nameId: scheme_name }
+                }}
+              >
+                <h3>{scheme_name}</h3>
+              </NavLink>
             </div>
             <div className="star-icons">
               <i className="fas fa-star"></i>
