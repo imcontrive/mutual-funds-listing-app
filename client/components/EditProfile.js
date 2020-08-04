@@ -7,7 +7,6 @@ class EditProfile extends Component {
     email: "",
     gender: "",
     age: ""
-    // msg: ""
   };
 
   componentDidMount() {
@@ -94,14 +93,16 @@ class EditProfile extends Component {
           <p className="dropmenu">
             <p>
               <label htmlFor="gender">Gender</label>
-              <input
-                type="text"
-                className="form-input"
-                name="gender"
-                placeholder="Select your gender"
-                value={this.state.gender}
-                onChange={this.handleChange}
-              />
+              <div className="select">
+                <select name="gender" id="slct" onChange={this.handleChange}>
+                  <option selected disabled>
+                    Choose an option
+                  </option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Transgender">Transgender</option>
+                </select>
+              </div>
             </p>
             <p>
               <label htmlFor="age">Age</label>
@@ -121,14 +122,6 @@ class EditProfile extends Component {
             value="Update Profile"
             onClick={this.updateHandler}
           />
-          {/* {this.state.msg ? (
-            <p style={{ color: "#1a3878", textAlign: "center" }}>
-              {" "}
-              {this.state.msg}{" "}
-            </p>
-          ) : (
-            ""
-          )} */}
         </div>
       </div>
     );

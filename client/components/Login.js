@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { fetchLoginData } from "../actions/index";
 
 class Login extends Component {
   state = {
@@ -20,28 +21,8 @@ class Login extends Component {
     e.preventDefault();
     const { email, password } = this.state;
     const body = { email, password };
-
-    fetch("http://localhost:3000/api/v1/users/login", {
-      method: "POST",
-      body: JSON.stringify(body),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(res => {
-        return res.status === 200
-          ? res.json().then(data => {
-              // console.log(data);
-              localStorage.setItem("authToken", data.token);
-              this.props.dispatch({
-                type: "USER_LOGIN_SUCCESS",
-                data: data
-              });
-              this.props.history.push("/");
-            })
-          : console.log(res, "server error");
-      })
-      .catch(error => console.error("Error:", error));
+    this.props.dispatch(fetchLoginData(body));
+    this.props.history.push("/");
   };
 
   render() {

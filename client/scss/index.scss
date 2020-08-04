@@ -1,8 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-image: url(https://images.unsplash.com/photo-1545147976-46eba097895e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Styles for HomePage */
@@ -11,15 +12,6 @@ body {
   min-width: 367px;
   width: 100%;
   height: 100vh;
-  // background-size: 100% 100%;
-  // background-repeat: no-repeat;
-  // background-image: url(https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
-  // radial-gradient(
-  //   ellipse closest-side,
-  //   rgba(54, 54, 54, 0.75),
-  //   #c09f5a
-  // ),
-  // background-image: url(https://images.unsplash.com/photo-1589666564459-93cdd3ab856a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
   .hero-heading {
     font-size: 4em;
     font-weight: 700;
@@ -33,9 +25,7 @@ body {
   }
 }
 
-/* Styles for Header*/
-
-/* Styles for Login ? SignUp*/
+/* Styles for Login || SignUp*/
 
 .login-card,
 .signup-card {
@@ -106,34 +96,59 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.dropmenu {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* COMMON CSS*/
-
-.text-center {
-  text-align: center;
-}
-
-.user-section img {
+/* Select DropDown  */
+select {
+  max-width: 500px;
+  width: 100%;
   height: 60px;
+  padding-left: 15px;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid #234567;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  width: 100%;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
+  margin: 12px;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #234567;
+}
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  cursor: pointer;
+  background: #fff;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #fff;
+  color: #234567;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
 }
 
-/*    Media Query    */
-
-@media all and (max-width: 630px) {
-  .main-wrapper .hero-heading {
-    font-size: 20px;
-  }
+.select:hover::after {
+  color: #fff;
+  background: #234567;
 }
 
-// Listing page UI
+/* 
+/* Select DropDown ends here  */
+
+// Listing page UI && Card
 .is_product_wrapper {
   padding-top: 5em;
 }
@@ -142,7 +157,7 @@ input::-webkit-inner-spin-button {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  height: 110px;
+  min-height: 110px;
   box-shadow: 5px 5px 25px 5px rgba(213, 213, 211, 0.6);
   border-radius: 8px;
   padding: 10px;
@@ -206,14 +221,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-@media (max-width: 769px) {
-  .main-wrapper .hero-heading {
-    font-size: 24px;
-    line-height: 36px;
-  }
-}
-
-// search bar
+/*  Listing page UI end here*/
 
 .wrapper {
   display: flex;
@@ -228,7 +236,6 @@ input::-webkit-inner-spin-button {
 }
 
 input[type="search"] {
-  -webkit-appearance: none !important;
   background-clip: padding-box;
   background-color: white;
   vertical-align: middle;
@@ -404,6 +411,39 @@ span h4 {
   align-items: center;
   font-size: 3em;
   border: 2px solid #1a3878;
+  color: #1a3878;
 }
 
 /* user Profile card ends here.*/
+
+/**********************MEDIA QUERIES**********************/
+
+// @media (max-width: 769px) {
+//   .main-wrapper .hero-heading {
+//     font-size: 24px;
+//     line-height: 36px;
+//   }
+// }
+
+@media all and (max-width: 630px) {
+  .main-wrapper .hero-heading {
+    font-size: 20px;
+  }
+  .container,
+  .card {
+    max-width: 367px;
+    width: 100%;
+  }
+  .card-header,
+  .card-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-body p {
+    margin: 10px 0px;
+  }
+  .star-icons {
+    padding-left: 5px;
+    margin: 10px;
+  }
+}

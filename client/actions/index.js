@@ -29,3 +29,28 @@ export const noToken = () => {
     });
   };
 };
+
+export const fetchLoginData = body => {
+  return dispatch => {
+    fetch(`${rootUrl}/users/login`, {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => {
+        return res.status === 200
+          ? res.json().then(data => {
+              localStorage.setItem("authToken", data.token);
+              dispatch({
+                type: "USER_LOGIN_SUCCESS",
+                data: data
+              });
+              // this.props.history.push("/");
+            })
+          : console.log(res, "server error");
+      })
+      .catch(error => console.error("Error:", error));
+  };
+};

@@ -21,7 +21,6 @@ export default class Signup extends Component {
 
     const { name, email, gender, age, password } = this.state;
     const body = { name, email, gender, age, password };
-    console.log(body, "body");
     fetch("http://localhost:3000/api/v1/users/signup", {
       method: "POST",
       body: JSON.stringify(body),
@@ -31,7 +30,6 @@ export default class Signup extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data, "cp");
         this.props.history.push("/Login");
       })
       .catch(error => console.error("Error:", error));
@@ -65,30 +63,31 @@ export default class Signup extends Component {
                 onChange={this.handleChange}
               />
             </p>
-            <p className="dropmenu">
-              <p>
-                <label htmlFor="gender">Gender</label>
-                <input
-                  type="text"
-                  className="form-input"
-                  name="gender"
-                  placeholder="Select your gender"
-                  value={this.state.gender}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <label htmlFor="age">Age</label>
-                <input
-                  type="Number"
-                  className="form-input"
-                  name="age"
-                  placeholder="Enter your age"
-                  value={this.state.age}
-                  onChange={this.handleChange}
-                />
-              </p>
+            <p>
+              <label htmlFor="gender">Gender</label>
+              <div className="select">
+                <select name="gender" id="slct" onChange={this.handleChange}>
+                  <option selected disabled>
+                    Choose an option
+                  </option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Transgender">Transgender</option>
+                </select>
+              </div>
             </p>
+            <p>
+              <label htmlFor="age">Age</label>
+              <input
+                type="Number"
+                className="form-input"
+                name="age"
+                placeholder="Enter your age"
+                value={this.state.age}
+                onChange={this.handleChange}
+              />
+            </p>
+            {/* </p> */}
             <p>
               <label htmlFor="password">Password</label>
               <input

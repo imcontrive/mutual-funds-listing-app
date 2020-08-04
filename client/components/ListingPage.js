@@ -31,14 +31,10 @@ class ListingPage extends Component {
 
   componentDidMount() {
     //looping over APIs
-    var fetchAll = () => {
-      let allresData = {};
-    };
     for (const url of API_URLS) {
       fetch(url)
         .then(res => res.json())
         .then(data => {
-          // console.log(data);
           this.props.dispatch({
             type: "GET_FUNDS_SUCCESS",
             payload: data
@@ -61,7 +57,6 @@ class ListingPage extends Component {
           _toSendData = funds;
         }
       }
-      // console.log(_toSendData, "_toSendData = funds;");
     } else {
       _toSendData = funds;
     }
@@ -72,7 +67,6 @@ class ListingPage extends Component {
           <div className="container">
             <div className="search-form form">
               <label>
-                {/* <span className="screen-reader-text">Search for...</span> */}
                 <input
                   type="search"
                   className="search-field"
@@ -90,10 +84,6 @@ class ListingPage extends Component {
             </div>
           </div>
         </div>
-        <Card data={_toSendData} />
-        <Card data={_toSendData} />
-        <Card data={_toSendData} />
-        <Card data={_toSendData} />
         <Card data={_toSendData} />
         <Card data={_toSendData} />
         <Card data={_toSendData} />
