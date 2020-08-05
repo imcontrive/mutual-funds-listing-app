@@ -45,6 +45,8 @@ body {
     font-weight: 500;
     font-size: 3rem;
     padding-bottom: 3rem;
+    color: #1a3878;
+    text-transform: uppercase;
   }
 
   p > label,
@@ -75,17 +77,24 @@ body {
   }
 
   .btn-primary {
+    // text-transform: uppercase;
     background-color: #234567;
     border-color: #234567;
     color: #fff;
     width: 100%;
     height: 40px;
     border-radius: 5px;
+    font-weight: 500;
   }
 
   .btn-primary:hover {
-    background-color: #2f5378;
-    border-color: #93cf66;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1a3878;
+    background: transparent;
+    border: 2px solid #1a3878;
+    // background-color: #2f5378;
+    // border-color: #93cf66;
     cursor: pointer;
   }
 }
