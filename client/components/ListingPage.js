@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { mutualFunds } from "../../products";
 
-console.log(mutualFunds, "mutualFundsmutualFundsmutualFunds");
-
 import Card from "./Card";
 
 // const API_URLS = [
@@ -49,17 +47,15 @@ class ListingPage extends Component {
   render() {
     const { query } = this.state;
     const { funds } = this.props;
-    console.log("query", query, funds, "funds");
     var _toSendData;
 
     if (query) {
       const regexp = new RegExp(query, "i");
-      //Need to improve
-      if (funds) {
-        if (regexp.test(funds.meta.scheme_name)) {
-          _toSendData = funds;
+      _toSendData = funds.filter(fund => {
+        if (regexp.test(fund.meta.scheme_name)) {
+          return fund;
         }
-      }
+      });
     } else {
       _toSendData = funds;
     }
@@ -87,11 +83,7 @@ class ListingPage extends Component {
             </div>
           </div>
         </div>{" "}
-        {funds ? funds.map(fund => <Card data={fund.meta} />) : ""}
-        {/* // <Card data={_toSendData} />
-        // <Card data={_toSendData} />
-        // <Card data={_toSendData} />
-        // <Card data={_toSendData} /> */}
+        {_toSendData ? _toSendData.map(fund => <Card data={fund.meta} />) : ""}
       </div>
     );
   }
